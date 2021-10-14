@@ -25,7 +25,7 @@ dropDown.addEventListener("change", (e)=>{
     for (let film of films){
         if(dropDown.value === film.title){
             console.log(film);
-            selectedFilm = film;
+            selectedFilm = film.title;
             movieTitle.textContent = film.title;
             movieYear.textContent =  film.release_date;
             movieDescrip.textContent = film.description;
@@ -36,14 +36,19 @@ dropDown.addEventListener("change", (e)=>{
 })
 const addButton = document.querySelector("#save-button");
 const reviews = document.querySelector("#review");
-const textinput = document.querySelector("#text-input");   
+const textinput = document.querySelector("#text-input").value;  
+
 
 addButton.addEventListener("click",(e)=>{
 e.preventDefault();
     let savedReview = document.createElement("li");
-    savedReview.innerHTML = textinput.value ;
-    reviews.append(savedReview);
-    e.target.reset;
+    savedReview.innerHTML = `<strong>${selectedFilm.value}</strong>:<b> ${review}`;
+    savedReview.textContent = textinput;
+    savedReview.append(reviews);
+    document.querySelector("#save-button").reset();
+
+    
+    
 
 
 })

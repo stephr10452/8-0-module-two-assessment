@@ -42,3 +42,7 @@ button {
     align-items: center;
     
   }
+
+  span{
+    float:left;
+}
