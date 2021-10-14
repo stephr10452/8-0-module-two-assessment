@@ -6,12 +6,14 @@ fetch("https://ghibliapi.herokuapp.com/films")
 .then((films)=>{
     console.log(films);
 
-    let movieSelect = document.querySelector("#movie-select");
+    let dropDown = document.querySelector("#dropDown");
 
     for (let film of films) {
         const option = document.createElement("option");
         option.setAttribute("value", film.title);
         option.textContent = film.title;
-        movieSelect.append(option);
+        dropDown.append(option);
     }
+
+    
 })

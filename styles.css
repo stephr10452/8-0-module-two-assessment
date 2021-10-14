@@ -3,14 +3,19 @@ body{
     display:grid;
     grid-template-areas: 
     "header header header ."
+    "main main main ."
      ;
 }
 
 header{
-    grid-area: form;
+    grid-area: header;
     background-color:skyblue;
-    max-width: 900px;
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
     padding-bottom: 20px;
+}
+
+main{
+    grid-area: main;
+    text-align: center;
 }
