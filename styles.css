@@ -1,21 +1,27 @@
 body{
+    display: grid;
     background-color: lavender;
-    display:grid;
-    grid-template-areas: 
-    "header header header ."
-    "main main main ."
-     ;
+    justify-items: center;
+    justify-content: center;
+    
+
 }
 
 header{
-    grid-area: header;
+   display: grid;
     background-color:skyblue;
-    width: 75%;
-    margin: 0 auto;
-    padding-bottom: 20px;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+   max-width: 75%;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    font-family: monospace;
+    
+
 }
 
 main{
-    grid-area: main;
+ display: grid;
     text-align: center;
 }

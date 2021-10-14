@@ -14,6 +14,17 @@ fetch("https://ghibliapi.herokuapp.com/films")
         option.textContent = film.title;
         dropDown.append(option);
     }
+  let movieTitle = document.querySelector("#movie-title");
+  const movieYear = document.querySelector("#movie-released-date");
+  const movieDescrip = document.querySelector("#movie-description");
 
+
+dropDown.addEventListener("change", ()=>{
+    for (let film of films){
+        if(dropDown.value === film.title){
+            console.log(film);
+        }
+    }
+})
     
 })
