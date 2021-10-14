@@ -36,18 +36,17 @@ dropDown.addEventListener("change", (e)=>{
 })
 const addButton = document.querySelector("#save-button");
 const reviews = document.querySelector("#review");
-const textinput = document.querySelector("#text-input").value;  
-
+const textinput = document.querySelector("#text-input");   
 
 addButton.addEventListener("click",(e)=>{
 e.preventDefault();
     let savedReview = document.createElement("li");
-    savedReview.innerHTML = `<strong>${selectedFilm.value}</strong>:<b> ${review}`;
-    savedReview.textContent = textinput;
-    savedReview.append(reviews);
-    document.querySelector("#save-button").reset();
-
-    
+    savedReview.innerHTML = textinput.value ;
+    let strong = document.createElement("strong");
+    savedReview.prepend(strong);
+    strong.textContent = `${dropDown.value}:`;
+    reviews.append(savedReview);
+    e.target.value;
     
 
 
