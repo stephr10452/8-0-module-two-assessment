@@ -6,5 +6,12 @@ fetch("https://ghibliapi.herokuapp.com/films")
 .then((films)=>{
     console.log(films);
 
-    let form = document.querySelector("")
+    let movieSelect = document.querySelector("#movie-select");
+
+    for (let film of films) {
+        const option = document.createElement("option");
+        option.setAttribute("value", film.title);
+        option.textContent = film.title;
+        movieSelect.append(option);
+    }
 })
