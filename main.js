@@ -36,12 +36,12 @@ dropDown.addEventListener("change", (e)=>{
 })
 const addButton = document.querySelector("#save-button");
 const reviews = document.querySelector("#list_review");
-const textinput = document.querySelector("#text-input").value;   
+const textinput = document.querySelector("#text-input");   
 
 addButton.addEventListener("click",(e)=>{
 e.preventDefault();
     let savedReview = document.createElement("li");
-    savedReview.textContent = textinput;
+    savedReview.textContent = e.target.textinput.value;
     reviews.append(savedReview);
 
 })
