@@ -1,4 +1,11 @@
 body{
+    background-color: lavender;
     display:grid;
-    grid-template-areas: ;
+    grid-template-areas: 
+    "header header header ."
+     ;
+}
+
+header{
+    grid-area: form;
 }
