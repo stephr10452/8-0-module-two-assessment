@@ -20,7 +20,8 @@ fetch("https://ghibliapi.herokuapp.com/films")
   
   let selectedFilm;
 
-dropDown.addEventListener("change", ()=>{
+dropDown.addEventListener("change", (e)=>{
+    e.preventDefault();
     for (let film of films){
         if(dropDown.value === film.title){
             console.log(film);
@@ -28,12 +29,21 @@ dropDown.addEventListener("change", ()=>{
             movieTitle.textContent = film.title;
             movieYear.textContent =  film.release_date;
             movieDescrip.textContent = film.description;
-          
+            addButton.setAttribute("style", "display:block");
 
         }
     }
 })
 const addButton = document.querySelector("#save-button");
 const reviews = document.querySelector("#list_review");
-    
+const textinput = document.querySelector("#text-input").value;   
+
+addButton.addEventListener("click",(e)=>{
+e.preventDefault();
+    let savedReview = document.createElement("li");
+    savedReview.textContent = textinput;
+    reviews.append(savedReview);
+
+})
+
 })

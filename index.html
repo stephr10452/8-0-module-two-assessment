@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GhibliReviewApp</title>
+    <title>Module 2</title>
     <script defer src="main.js"></script>
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-
+    <div id="thetop">
     <header>
-        <div id="logo">
-            <img src="images/ghibli-logo.png" alt="Studio Logo"/>
-        <h1>
-      Ghibli Review App  
-    </h1>
-    </header>
+        <h1>Ghibli Review App</h1>
+     <img src="./images/ghibli-logo.png">
+      </header>
+      </div>
     <form>
         <select  id="dropDown">
             <option value="">Select A Movie</option>
@@ -27,19 +25,19 @@
             <p id="movie-released-date"></p>
             <p id="movie-description"></p>
         </section>
-        </main>
         <div id = "submit-a-review">
-            <d id="review">
+            <div id="review">
                 <span>Your Review:</span>
                 <span><textarea id="text-input" placeholder="type here..."></textarea></span>
                 <span><button id="save-button" style="display:button">Submit Review</button></span>
-                <div id="review-placeholder"></div>
+    
                 <section id="reviews">
                 <ul div="list_review"></ul>
             </section>
             </div>
         </div>
-    
+    </main>
     </form>
+
 </body>
 </html>
