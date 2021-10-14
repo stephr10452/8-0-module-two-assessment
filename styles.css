@@ -30,3 +30,14 @@ main{
  display: grid;
     text-align: center;
 }
+button {
+    text-align: right;
+    display: block;
+    margin: 0 auto;
+}
+ 
+.row {
+    display: flex;
+    align-items: center;
+    
+  }
